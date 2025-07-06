@@ -1,5 +1,6 @@
 import React from 'react';
-import SparkChart from './SparkChart.jsx';
+// ビルド後は .js 拡張子になるため、拡張子なしでインポート
+import SparkChart from './SparkChart';
 
 /**
  * 経済指標カードのサンプルコンポーネント
