@@ -14,18 +14,16 @@
   <script src="libs/react-dom.development.js"></script>
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Babel Standalone (JSXをブラウザで変換) -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <!-- コンポーネント読み込み -->
-  <script type="text/babel" src="SparkChart.jsx"></script>
-  <script type="text/babel" src="EconomicCard.jsx"></script>
+  <!-- コンポーネント読み込み（ビルド済みJS） -->
+  <script src="SparkChart.js"></script>
+  <script src="EconomicCard.js"></script>
 </head>
 <body class="bg-gray-100 flex items-center justify-center h-screen font-sans">
   <div id="root"></div>
-  <script type="text/babel">
+  <script>
     // EconomicCardコンポーネントを画面に描画
     ReactDOM.createRoot(document.getElementById('root')).render(
-      <EconomicCard />
+      React.createElement(EconomicCard)
     );
   </script>
 </body>
