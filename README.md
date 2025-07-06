@@ -76,7 +76,7 @@ npm run unpack
 スタート画面 (`index.html`) では React を利用した `start_screen_react.js` が読み込まれます。
 今回、ゲーム画面も React で試せるよう `game_screen_react.html` と `game_screen_react.js` を追加しました。
 React 版スタート画面からはこちらのファイルに遷移します。
-従来のプレーンな実装 (`game_screen.html`) も残してあるので、用途に応じて使い分けてください。
+従来のプレーンな実装 (`game_screen.html`) は現在、React 版へリダイレクトするだけのページとなっています。
 
 ### 経済指数ダッシュボード
 `game_screen_react.html` では CPI・失業率・政策金利・GDP 成長率をヘッダーに常時表示します。
@@ -250,14 +250,14 @@ npm run generate-manifest
 
 英単語を日本語に置き換え、ハイフンやアンダースコアはスペースとして扱います。1文字だけのアルファベットは大文字で残るので、一覧を見ただけで内容がわかります。
 
-その後、`game_screen.html` などで `spriteInfo.js` が読み込まれているか確認してください。
+その後、`game_screen_react.html` などで `spriteInfo.js` が読み込まれているか確認してください。
 
 これにより、マップ生成時に使用タイルの一覧がコンソールへ表示され、選択ミスを防げます。
 
 ### 自作マップの読み込み
 
 `public/custom_map_sample.js` を参考に、`window.customMapData` という2次元配列を
-定義したファイルを用意します。`game_screen.html` に追加で読み込むことで、ランダム
+定義したファイルを用意します。`game_screen_react.html` に追加で読み込むことで、ランダム
 生成ではなくこの配列を使ってマップを描画できます。
 
 ```html
